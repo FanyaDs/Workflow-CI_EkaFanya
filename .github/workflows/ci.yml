@@ -1,29 +1,25 @@
-
 name: MLflow CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - name: Setup Python 3.12
-      uses: actions/setup-python@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.12'
+        python-version: "3.12"
 
     - name: Install dependencies
-      run: |
-        pip install mlflow==2.19.0 scikit-learn==1.5.2 pandas nltk Sastrawi
+      run: pip install -r requirements.txt
 
     - name: Run MLflow project
-      run: |
-        mlflow run .
+      run: mlflow run . --env-manager=local

@@ -1,7 +1,4 @@
-name: sentiment-analysis
-
-conda_env: conda.yaml
-
+name: sentiment-ci
 entry_points:
   main:
     parameters:

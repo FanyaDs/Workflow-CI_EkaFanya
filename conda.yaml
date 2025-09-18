@@ -1,4 +1,4 @@
-name: workflow-ci
+name: sentiment-env
 channels:
   - conda-forge
   - defaults
@@ -6,7 +6,4 @@ dependencies:
   - python=3.12
   - pip
   - pip:
-      - mlflow==2.19.0
-      - scikit-learn==1.5.2
-      - pandas
-      - numpy
+      - -r requirements.txt
