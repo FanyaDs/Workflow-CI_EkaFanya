@@ -7,3 +7,9 @@ dependencies:
   - pip
   - pip:
       - mlflow==2.19.0
+      - pandas
+      - numpy
+      - nltk
+      - Sastrawi
+      - matplotlib
+      - seaborn

@@ -1,6 +1,9 @@
+name: sentiment-analysis
 
-name: sentiment_analysis_project
 conda_env: conda.yaml
+
 entry_points:
   main:
-    command: "python modelling.py"
+    parameters:
+      data: {type: str, default: "namadataset_preprocessing.csv"}
+    command: "python modelling.py --data {data}"
