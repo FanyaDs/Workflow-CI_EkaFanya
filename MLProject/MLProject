@@ -1,0 +1,5 @@
+name: Sentimen_RF_EkaFanya
+entry_points:
+  main:
+    parameters: {}
+    command: "python modelling.py"
