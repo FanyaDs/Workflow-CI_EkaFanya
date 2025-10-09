@@ -1,0 +1,24 @@
+========================================================
+🧪 Kriteria 1 — Eksperimen SML
+Nama: Eka Fanya Yohana Dasilva
+Username Dicoding: FanyaDs
+========================================================
+
+Dataset: Indonesian Sentiment (11000 rows)
+Sumber: Kaggle (alvinhanafie/dataset-for-indonesian-sentiment-analysis)
+
+Ringkasan langkah:
+- Import library
+- Load data (train/valid/test .tsv -> digabung)
+- EDA: distribusi label, contoh teks, panjang teks
+- Preprocessing: case folding, remove stopwords (NLTK/Sastrawi), stemming (Sastrawi)
+- Split: train/test (70/30)
+- Featurization: TF-IDF (max_features=5000)
+- Baseline Model: RandomForestClassifier
+- Hasil awal: akurasi ~82%, macro-F1 ~0.76
+
+Catatan:
+- Notebook eksperimen berada di Google Colab (local session).
+- Pipeline otomatisasi dibuat ulang pada MLProject/modelling.py
+
+========================================================
